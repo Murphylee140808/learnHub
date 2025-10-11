@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - LearnHub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🎓 LearnHub</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="btn btn-secondary">← Back to Courses</a>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Course Header -->
+            <section class="course-header">
+                <div class="course-header-content">
+                    <h2 id="courseTitle">Course Title</h2>
+                    <p id="courseDescription" class="course-description">Course description will appear here</p>
+                    <div class="course-meta">
+                        <span class="meta-item">
+                            <strong>Duration:</strong> <span id="courseDuration"></span>
+                        </span>
+                        <span class="meta-item">
+                            <strong>Level:</strong> <span id="courseLevel"></span>
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Progress Overview -->
+                <div class="progress-overview">
+                    <h4>Your Progress</h4>
+                    <div class="progress-bar-container">
+                        <div id="courseProgressBar" class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span id="progressPercentage" class="progress-text">0%</span>
+                    </div>
+                    <p id="progressDetails" class="progress-details">0 of 0 lessons completed</p>
+                </div>
+            </section>
+
+            <!-- Lessons List -->
+            <section class="lessons-section">
+                <h3>Course Lessons</h3>
+                <div id="lessonsList" class="lessons-list">
+                    <!-- Lessons will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <!-- Course Actions -->
+            <section class="course-actions">
+                <button id="markCourseComplete" class="btn btn-primary btn-large">
+                    ✓ Mark Entire Course as Complete
+                </button>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 LearnHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Course Page Specific Script -->
+    <script>
+        // Initialize course page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initCoursePage();
+        });
+    </script>
+</body>
+</html>
